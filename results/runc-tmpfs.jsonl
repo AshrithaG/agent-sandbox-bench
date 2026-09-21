@@ -1,0 +1,49 @@
+{"kind": "probe", "probe": "kernel", "allowed": true, "errno": "", "note": "6.8.0-139-generic", "config": "runc-tmpfs"}
+{"kind": "probe", "probe": "unshare_user_ns", "allowed": false, "errno": "EPERM", "note": "user namespace creation", "config": "runc-tmpfs"}
+{"kind": "probe", "probe": "mount", "allowed": false, "errno": "EPERM", "note": "mount a filesystem", "config": "runc-tmpfs"}
+{"kind": "probe", "probe": "ptrace", "allowed": true, "errno": "", "note": "trace a process", "config": "runc-tmpfs"}
+{"kind": "probe", "probe": "bpf", "allowed": false, "errno": "EPERM", "note": "EINVAL means it reached a kernel", "config": "runc-tmpfs"}
+{"kind": "probe", "probe": "perf_event_open", "allowed": false, "errno": "EPERM", "note": "EINVAL/EFAULT means it reached a kernel", "config": "runc-tmpfs"}
+{"kind": "probe", "probe": "io_uring_setup", "allowed": false, "errno": "EPERM", "note": "EINVAL/EFAULT means it reached a kernel", "config": "runc-tmpfs"}
+{"kind": "probe", "probe": "userfaultfd", "allowed": false, "errno": "EPERM", "note": "used in several kernel exploits", "config": "runc-tmpfs"}
+{"kind": "probe", "probe": "keyctl", "allowed": false, "errno": "EPERM", "note": "kernel keyring", "config": "runc-tmpfs"}
+{"kind": "probe", "probe": "kallsyms_addresses", "allowed": false, "errno": "EACCES", "note": "non-zero kernel addresses readable", "config": "runc-tmpfs"}
+{"kind": "probe", "probe": "write_rootfs", "allowed": false, "errno": "EACCES", "note": "write outside the scratch dir", "config": "runc-tmpfs"}
+{"kind": "abuse", "probe": "network_egress", "allowed": true, "errno": "", "note": "http 200", "config": "runc-tmpfs"}
+{"kind": "abuse", "probe": "fork_600", "allowed": true, "note": "reached cap 600", "exit": 0, "config": "runc-tmpfs"}
+{"kind": "abuse", "probe": "memory_1536mb", "allowed": true, "errno": "", "note": "exit 0, got to reached cap MB", "exit": 0, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "cold_start", "seconds": 0.23170947900001693, "rep": 0, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "cpu", "seconds": 0.12771945399998685, "rep": 0, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "small_files", "seconds": 0.0327819070000146, "rep": 0, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "spawn", "seconds": 0.01674357899997858, "rep": 0, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "git_repo", "seconds": 0.015458493000039653, "rep": 0, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "cold_start", "seconds": 0.2911146540000118, "rep": 1, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "cpu", "seconds": 0.2512867730000039, "rep": 1, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "small_files", "seconds": 0.027245395000022654, "rep": 1, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "spawn", "seconds": 0.041883803000018816, "rep": 1, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "git_repo", "seconds": 0.013260820999960288, "rep": 1, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "cold_start", "seconds": 0.16403432699996756, "rep": 2, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "cpu", "seconds": 0.3006731350000109, "rep": 2, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "small_files", "seconds": 0.02532551499996316, "rep": 2, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "spawn", "seconds": 0.011380318000021816, "rep": 2, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "git_repo", "seconds": 0.01450015800003257, "rep": 2, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "cold_start", "seconds": 0.1463497459999985, "rep": 3, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "cpu", "seconds": 0.24941085299997212, "rep": 3, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "small_files", "seconds": 0.024673014000029525, "rep": 3, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "spawn", "seconds": 0.009356686999979047, "rep": 3, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "git_repo", "seconds": 0.013177362999954312, "rep": 3, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "cold_start", "seconds": 1.0528288699999848, "rep": 4, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "cpu", "seconds": 0.18146474200000284, "rep": 4, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "small_files", "seconds": 0.022028175000002648, "rep": 4, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "spawn", "seconds": 0.008930437000003622, "rep": 4, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "git_repo", "seconds": 0.01163510999998607, "rep": 4, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "cold_start", "seconds": 0.17148546999999326, "rep": 5, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "cpu", "seconds": 0.13872760399999606, "rep": 5, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "small_files", "seconds": 0.04024738199996136, "rep": 5, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "spawn", "seconds": 0.015005282999993597, "rep": 5, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "git_repo", "seconds": 0.013125236999997014, "rep": 5, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "cold_start", "seconds": 0.14057685799997444, "rep": 6, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "cpu", "seconds": 0.12564940799995838, "rep": 6, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "small_files", "seconds": 0.023263219999989815, "rep": 6, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "spawn", "seconds": 0.008711019999964265, "rep": 6, "config": "runc-tmpfs"}
+{"kind": "cost", "workload": "git_repo", "seconds": 0.01241436100002602, "rep": 6, "config": "runc-tmpfs"}

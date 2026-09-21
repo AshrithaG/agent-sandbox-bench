@@ -1,0 +1,49 @@
+{"kind": "probe", "probe": "kernel", "allowed": true, "errno": "", "note": "4.19.0-gvisor", "config": "runsc-cpus1"}
+{"kind": "probe", "probe": "unshare_user_ns", "allowed": true, "errno": "", "note": "user namespace creation", "config": "runsc-cpus1"}
+{"kind": "probe", "probe": "mount", "allowed": false, "errno": "EPERM", "note": "mount a filesystem", "config": "runsc-cpus1"}
+{"kind": "probe", "probe": "ptrace", "allowed": true, "errno": "", "note": "trace a process", "config": "runsc-cpus1"}
+{"kind": "probe", "probe": "bpf", "allowed": false, "errno": "EPERM", "note": "EINVAL means it reached a kernel", "config": "runsc-cpus1"}
+{"kind": "probe", "probe": "perf_event_open", "allowed": false, "errno": "OTHER", "note": "EINVAL/EFAULT means it reached a kernel", "config": "runsc-cpus1"}
+{"kind": "probe", "probe": "io_uring_setup", "allowed": false, "errno": "ENOSYS", "note": "EINVAL/EFAULT means it reached a kernel", "config": "runsc-cpus1"}
+{"kind": "probe", "probe": "userfaultfd", "allowed": false, "errno": "ENOSYS", "note": "used in several kernel exploits", "config": "runsc-cpus1"}
+{"kind": "probe", "probe": "keyctl", "allowed": false, "errno": "ENOSYS", "note": "kernel keyring", "config": "runsc-cpus1"}
+{"kind": "probe", "probe": "kallsyms_addresses", "allowed": false, "errno": "EACCES", "note": "non-zero kernel addresses readable", "config": "runsc-cpus1"}
+{"kind": "probe", "probe": "write_rootfs", "allowed": false, "errno": "EACCES", "note": "write outside the scratch dir", "config": "runsc-cpus1"}
+{"kind": "abuse", "probe": "network_egress", "allowed": true, "errno": "", "note": "http 200", "config": "runsc-cpus1"}
+{"kind": "abuse", "probe": "fork_600", "allowed": true, "note": "reached cap 600", "exit": 0, "config": "runsc-cpus1"}
+{"kind": "abuse", "probe": "memory_1536mb", "allowed": true, "errno": "", "note": "exit 0, got to reached cap MB", "exit": 0, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "cold_start", "seconds": 0.34856875000002674, "rep": 0, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "cpu", "seconds": 0.12614653600000003, "rep": 0, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "small_files", "seconds": 0.26488356, "rep": 0, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "spawn", "seconds": 0.261205428, "rep": 0, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "git_repo", "seconds": 0.6840510259999999, "rep": 0, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "cold_start", "seconds": 0.21860233000001017, "rep": 1, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "cpu", "seconds": 0.277347982, "rep": 1, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "small_files", "seconds": 0.51737922, "rep": 1, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "spawn", "seconds": 4.392433772, "rep": 1, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "git_repo", "seconds": 0.22027883800000048, "rep": 1, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "cold_start", "seconds": 0.8291294720000337, "rep": 2, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "cpu", "seconds": 0.1288377169999999, "rep": 2, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "small_files", "seconds": 0.12900654999999972, "rep": 2, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "spawn", "seconds": 0.12367373700000028, "rep": 2, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "git_repo", "seconds": 0.13216046400000003, "rep": 2, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "cold_start", "seconds": 0.21480107299998963, "rep": 3, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "cpu", "seconds": 0.15325639100000005, "rep": 3, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "small_files", "seconds": 0.07477825400000004, "rep": 3, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "spawn", "seconds": 0.10179135700000008, "rep": 3, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "git_repo", "seconds": 0.09220008499999999, "rep": 3, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "cold_start", "seconds": 0.19598107199999504, "rep": 4, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "cpu", "seconds": 0.120951859, "rep": 4, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "small_files", "seconds": 0.09289833700000005, "rep": 4, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "spawn", "seconds": 0.11290904899999998, "rep": 4, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "git_repo", "seconds": 0.08661140600000006, "rep": 4, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "cold_start", "seconds": 0.19862195299998575, "rep": 5, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "cpu", "seconds": 0.161223285, "rep": 5, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "small_files", "seconds": 0.101521315, "rep": 5, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "spawn", "seconds": 0.03729721000000008, "rep": 5, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "git_repo", "seconds": 0.08644748899999999, "rep": 5, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "cold_start", "seconds": 0.16541791899999225, "rep": 6, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "cpu", "seconds": 0.14762629500000002, "rep": 6, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "small_files", "seconds": 0.08435810900000001, "rep": 6, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "spawn", "seconds": 0.11333563300000005, "rep": 6, "config": "runsc-cpus1"}
+{"kind": "cost", "workload": "git_repo", "seconds": 0.12885204400000005, "rep": 6, "config": "runsc-cpus1"}
